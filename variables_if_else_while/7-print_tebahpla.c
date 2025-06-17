@@ -5,7 +5,7 @@
 /**
  * main - Entry point
  *
- * Description: Prints the size of various types
+ * Description: prints the lowercase alphabet in reverse, followed by a new line.
  *
  * Return: Always 0 (Success)
  */
