@@ -17,7 +17,7 @@ int main(void)
 {
 	printf("%d", number);
 	if (number != 57)
-	prinf(",");
+	printf(",");
 	number++;
 }
 	putchar ('\n');
