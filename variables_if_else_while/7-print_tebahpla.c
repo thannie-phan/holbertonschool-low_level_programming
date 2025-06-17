@@ -11,10 +11,12 @@
  */
 int main(void)
 {
-	char letter;
+	char number;
 
-	for (letter = 'z'; letter >= 'a'; letter--)
-	putchar (letter);
+	for (number = 'a'; letter <= 'z'; letter++)
+		putchar (letter);
+	for (letter = '0'; letter <= '9'; letter++)
+		putchar (letter);
 	putchar ('\n');
 	return (0);
 }
