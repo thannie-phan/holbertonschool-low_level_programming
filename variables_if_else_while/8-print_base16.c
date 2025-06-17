@@ -5,7 +5,7 @@
 /**
  * main - Entry point
  *
- * Description: Prints the size of various types
+ * Description: prints all the numbers of base 16 in lowercase which is 0-9 then a-f followed by a new line.
  *
  * Return: Always 0 (Success)
  */
