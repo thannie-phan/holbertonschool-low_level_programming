@@ -5,7 +5,7 @@
 /**
  * main - Entry point
  *
- * Description: Prints the size of various types
+ * Description: Write a program that assigns a random number to variable n and prints whether it is possitive, negative or zero, followed by a new line
  *
  * Return: Always 0 (Success)
  */
