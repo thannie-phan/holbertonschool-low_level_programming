@@ -15,9 +15,9 @@ int main(void)
 
 	while (number <= 57)
 {
-	printf("%d", number);
+	putchar(number);
 	if (number != 57)
-	printf(",");
+	putchar(",");
 	number++;
 }
 	putchar ('\n');
