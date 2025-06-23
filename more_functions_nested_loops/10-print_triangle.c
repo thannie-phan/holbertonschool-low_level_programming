@@ -15,7 +15,7 @@ void print_triangle(int triangle_size)
 
 	return;
 	}
-	while (current_row < triangle_size)
+	while (current_row <= triangle_size)
 	{
 	int number_of_spaces = triangle_size - current_row;
 	int number_of_hashes = current_row;
