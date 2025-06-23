@@ -11,7 +11,8 @@ void print_square(int size)
 
 	if (size <= 0)
 	{
-	_putchar('\n')
+	_putchar('\n');:wq
+
 	return;
 	}
 	while (current_line < size)
@@ -25,4 +26,5 @@ void print_square(int size)
 	}
 	_putchar('\n');
 	current_line++;
+	}
 }
