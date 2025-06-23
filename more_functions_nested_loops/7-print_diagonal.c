@@ -9,13 +9,13 @@ void print_diagonal(int n)
 {
 	int current_line = 0;
 
-	if (number_of_lines <= 0)
+	if (n <= 0)
 	{
 	_putchar('\n');
 	return;
 	}
 
-	while (current_line < number_of_lines)
+	while (current_line < n)
 	{
 	int number_of_spaces = 0;
 
@@ -24,7 +24,7 @@ void print_diagonal(int n)
 	_putchar(' ');
 	number_of_spaces++;
 	}
-	_putchar('\\')
+	_putchar('\\');
 	_putchar('\n');
 	current_line++;
 }
