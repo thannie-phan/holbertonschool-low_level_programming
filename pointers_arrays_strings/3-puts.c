@@ -5,7 +5,7 @@
  * @str: the string
  * Return: (0)
  */
-int _puts(char *str)
+void _puts(char *str)
 {
 	int length_of_string = 0;
 
@@ -15,5 +15,5 @@ int _puts(char *str)
 	length_of_string++;
 	}
 
-	_putchar('\n')
+	_putchar('\n');
 }
