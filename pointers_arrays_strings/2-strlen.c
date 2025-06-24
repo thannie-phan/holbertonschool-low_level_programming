@@ -9,7 +9,7 @@ int _strlen(char *s)
 {
 	int length_of_string = 0;
 
-	while (s[lengh_of_string] != '\0')
+	while (s[length_of_string] != '\0')
 	{
 	length_of_string++;
 	}
