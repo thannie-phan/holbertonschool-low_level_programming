@@ -13,15 +13,12 @@ void print_array(int *a, int n)
 
 	while (number < n)
 	{
-	number++;
-	}
-	if (number == n - 1)
-	{
 	printf("%d", a[number]);
-	}
-	else
+	if (number != n - 1)
 	{
-	printf("%d ,", a[number]);
+	printf(",");
+	}
+	number++
 	}
 	printf("\n");
-}	
+}
