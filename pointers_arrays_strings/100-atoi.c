@@ -26,7 +26,7 @@ int _atoi(char *s)
 	else if (s[position] >= '0' && s[position] <= '9')
 	{
 	find_number = 1;
-	result = result * 10 + (s[position] - '0');
+	result = result * 10 - (s[position] - '0');
 	}
 	else if (find_number == 1)
 	{
@@ -34,5 +34,8 @@ int _atoi(char *s)
 	}
 	position++;
 	}
-	return (result * sign);
+	if (sign > 0)
+	return (-result);
+	else
+	return (result);
 }
