@@ -12,6 +12,12 @@ char *cap_string(char *str)
 	char separate[] = " \t\n,;.!?\"(){}";
 	int prev;
 
+	if (str[0] >= 'a' && str[0] <= 'z')
+	{
+	str[0] -= 32;
+	}
+	sen = 1;
+
 	while (str[sen] != '\0')
 	{
 	prev = 0;
