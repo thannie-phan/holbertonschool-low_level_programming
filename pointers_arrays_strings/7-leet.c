@@ -4,7 +4,7 @@
 /**
  * leet - encodes a string into 1337
  * @str: the pointer
- * Return: 0
+ * Return: to pointer
  */
 char *leet(char *str)
 {
@@ -18,13 +18,13 @@ char *leet(char *str)
 	check = 0;
 	while (lett[check] != '\0')
 	{
-	if (str[sen] == lett[check]
+	if (str[sen] == lett[check])
 	{
 	str[sen] = num[check];
 	}
 	check++;
 	}
-	sen++
+	sen++;
 	}
 	return (str);
 }
