@@ -9,9 +9,9 @@
  */
 unsigned int _strspn(char *s, char *accept)
 {
-	unsigned int count = 0
+	unsigned int count = 0;
 
-	int look
+	int look;
 	int match;
 
 	while (*s != '\0')
@@ -32,7 +32,7 @@ unsigned int _strspn(char *s, char *accept)
 	break;
 	}
 	count++;
-	s++
+	s++;
 	}
 	return (count);
 }
