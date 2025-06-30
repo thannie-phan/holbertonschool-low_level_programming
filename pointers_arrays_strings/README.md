@@ -1,1 +1,1 @@
-This is the folder for all the exercises on pointers ararys and strings project
+This is week of of arrays pointers and strings
