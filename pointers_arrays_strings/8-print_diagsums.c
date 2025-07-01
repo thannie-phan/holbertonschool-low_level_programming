@@ -20,5 +20,5 @@ void print_diagsums(int *a, int size)
 	rightdiag += a[count * size + count];
 	count++;
 	}
-	printf('%d, %d\n, leftdiag, rightdiag);
+	printf("%d, %d\n", leftdiag, rightdiag);
 }
