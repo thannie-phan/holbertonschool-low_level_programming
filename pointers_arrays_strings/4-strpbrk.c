@@ -15,11 +15,15 @@ char *_strpbrk(char *s, char *accept)
 	while (s[count] != '\0')
 	{
 	match = 0;
+	while (accept[match] != '\0')
+	{
 	if (s[count] == accept[match])
 	{
 	return (&s[count]);
 	}
 	match++;
+	}
 	count++;
 	}
+	return (NULL);
 }
