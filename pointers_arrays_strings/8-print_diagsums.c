@@ -1,5 +1,6 @@
 #include "main.h"
 #include "stddef.h"
+#include "stdio.h"
 
 /**
  * print_diagsums - print sum of 2 diagnoals of square matrix of int
@@ -17,7 +18,7 @@ void print_diagsums(int *a, int size)
 	{
 	leftdiag += a[count * size + count];
 	rightdiag += a[count * size + count];
-	count++
+	count++;
 	}
 	printf('%d, %d\n, leftdiag, rightdiag);
 }
