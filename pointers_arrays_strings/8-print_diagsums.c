@@ -17,7 +17,7 @@ void print_diagsums(int *a, int size)
 	while (count < size)
 	{
 	leftdiag += a[count * size + count];
-	rightdiag += a[count * size + count];
+	rightdiag += a[count * size + (size - 1 - count)];
 	count++;
 	}
 	printf("%d, %d\n", leftdiag, rightdiag);
