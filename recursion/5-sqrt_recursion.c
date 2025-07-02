@@ -1,5 +1,7 @@
 #include "main.h"
 
+int actual_sqrt_recursion(int number, int times);
+
 /**
  * _sqrt_recursion - returns natural square root of num
  * @n: number
@@ -25,7 +27,7 @@ int _sqrt_recursion(int n)
  */
 int actual_sqrt_recursion(int number, int times)
 {
-	if (times * times > n)
+	if (times * times > number)
 		return (-1);
 	if (times * times == number)
 		return (times);
