@@ -29,7 +29,7 @@ int check_prime(int number, int divisor)
 {
 	if (divisor * divisor > number)
 		return (1);
-	if (n % divisor == 0)
+	if (number % divisor == 0)
 		return (0);
 	return (check_prime(number, divisor + 1));
 }
