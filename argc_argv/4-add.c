@@ -27,7 +27,7 @@ int main(int argc, char *argv[])
 	{
 	char actual_arg = argv[find][each];
 
-	if (actual_arg < '0' II actual_arg > '9')
+	if (actual_arg < '0' || actual_arg > '9')
 	{
 	printf("Error\n");
 	return (1);
@@ -39,6 +39,6 @@ int main(int argc, char *argv[])
 	find++;
 	}
 
-	prinft("%d\n", sum);
+	printf("%d\n", sum);
 	return (0);
 }
