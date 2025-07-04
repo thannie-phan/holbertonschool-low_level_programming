@@ -7,9 +7,11 @@
  *
  * Return: 0
  */
-int main(int argc __attribute__((unused)), char *argv[])
+int main(int argc, char *argv[])
 {
 	int count = 0;
+
+	while (count < argc)
 	{
 	printf("%s\n", argv[count]);
 	count++;
