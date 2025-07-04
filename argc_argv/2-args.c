@@ -10,8 +10,6 @@
 int main(int argc __attribute__((unused)), char *argv[])
 {
 	int count = 0;
-
-	while (argv[count] == NULL)
 	{
 	printf("%s\n", argv[count]);
 	count++;
