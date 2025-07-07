@@ -6,7 +6,7 @@
  * @c: the char to intialises the array with
  * Return: NULL if size = 0 or fail
  */
-char *create_array(unsigned int size, char c);
+char *create_array(unsigned int size, char c)
 {
 	char *array;
 	unsigned int find = 0;
