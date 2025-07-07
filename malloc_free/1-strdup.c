@@ -6,7 +6,7 @@
  *
  * Return: pointer with duped str or NULL if not enough memory
  */
-char *_strdup(char *str);
+char *_strdup(char *str)
 {
 	int count = 0;
 	char *new_str;
