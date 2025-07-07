@@ -1,13 +1,13 @@
 #include "stdlib.h"
 
 /**
- * _str_concat - malloc and concatenates 2 strings
+ * str_concat - malloc and concatenates 2 strings
  * @s1: string 1
  * @s2: string 2
  *
  * Return: NULL on failure. if NULL pass, treat as empty str
  */
-char *_str_concat(char *s1, char *s2)
+char *str_concat(char *s1, char *s2)
 {
 	int length1 = 0;
 	int length2 = 0;
