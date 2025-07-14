@@ -1,0 +1,23 @@
+#include "stdlib.h"
+#include "function_pointers.h"
+
+/**
+ * array_iterator - array function
+ * @size: size of array
+ * @array: the array to perform on
+ * @action: the action to perform on the array
+ * Return: void
+ */
+void array_iterator(int *array, size_t size, void (*action)(int))
+{
+	if (array == NULL || action == NULL)
+	return;
+
+	int count = 0;
+
+	while (count < size)
+	{
+	action(array[count]);
+	count++;
+	}
+}
