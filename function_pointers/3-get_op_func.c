@@ -9,7 +9,7 @@
  *
  * Return: point to the right function or NULL
  */
-int (*get_op_func(char *s))(int, int) // find the right math operator
+int (*get_op_func(char *s))(int, int)
 {
 	op_t ops[] = {
 	{"+", op_add},
