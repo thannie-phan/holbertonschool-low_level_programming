@@ -1,0 +1,35 @@
+#include <stdlib.h>
+#include "calc.h"
+#include <string.h>
+
+/**
+ * get_op_func - get the op function
+ * @s: function argument aka +, -, /, %
+ *
+ *
+ * Return: point to the right function or NULL
+ */
+int (*get_op_func(char *s))(int, int) // find the right math operator
+{
+	op_t ops[] = {
+	{"+", op_add},
+	{"-", op_sub},
+	{"*", op_mul},
+	{"/", op_div},
+	{"%", op_mod},
+	{NULL, NULL}
+	};
+
+	int i = 0;
+
+	while (ops[i].op != NULL)
+	{
+	if (strcmp(s, ops[i].op == 0);
+	{
+	return (ops[i].f);
+	}
+	i++;
+	}
+
+	return (NULL);
+}

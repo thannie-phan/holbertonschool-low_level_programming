@@ -20,5 +20,6 @@ int op_subtract(int a, int b);
 int op_multiply(int a, int b);
 int op_divide(int a, int b);
 int op_modulo(int a, int b);
+int (*get_op_func(char *s))(int, int);
 
 #endif
