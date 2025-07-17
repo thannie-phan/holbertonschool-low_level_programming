@@ -1,4 +1,4 @@
-#include "variadic_functions.h"
+#include "variadic_functions_thannie.h"
 #include <stdio.h>
 #include <stdarg.h>
 
@@ -70,7 +70,7 @@ void print_all(const char * const format, ...)
 	int p_count;
 	char *separator = "";
 
-	struct printer printer_format[] = {
+	printer_t printer_format[] = {
 		{"c", print_char},
 		{"i", print_int},
 		{"f", print_float},
