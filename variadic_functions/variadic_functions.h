@@ -1,29 +1,23 @@
-#ifndef variadic_functions_h
-#define variadic_functions_h
+#ifndef MAIN_H
+#define MAIN_H
 
 #include <stdarg.h>
 
-int sum_them_all(const unsigned int n, ...);
-void print_numbers(const char *separator, const unsigned int n, ...);
-void print_strings(const char *separator, const unsigned int n, ...);
-
 /**
- * struct printer - Struct printer
+ * struct op - Struct op
  *
- * @symbol: The symbol shorten
- * @print: The function
+ * @t: The operator
+ * @f: The function associated
  */
-struct printer
+typedef struct op
 {
-	char *symbol;
-	void (*print)(va_list arg);
+	char *t;
+	void (*f)(va_list *list);
+} op_t;
 
-};
-
-void print_char(va_list arg);
-void print_int(va_list arg);
-void print_float(va_list arg);
-void print_string(va_list arg);
-void print_all(const char * const format, ...);
+void print_char(va_list *list);
+void print_int(va_list *list);
+void print_float(va_list *list);
+void print_string(va_list *list);
 
 #endif

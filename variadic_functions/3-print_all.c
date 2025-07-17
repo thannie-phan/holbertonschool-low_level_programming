@@ -1,104 +1,108 @@
-#include "variadic_functions.h"
-#include <stdio.h>
 #include <stdarg.h>
+#include <stdio.h>
+#include "variadic_functions.h"
 
 /**
- * print_char - print char
- * @arg: va_list with the char to print
- */
-void print_char(va_list arg)
-{
-	char letter;
-
-	letter = va_arg(arg, int);
-	printf("%c", letter);
-}
-
-/**
- * print_int - print int
- * @arg: va_list with the int to print
- */
-void print_int(va_list arg)
-{
-	int num;
-
-	num = va_arg(arg, int);
-	printf("%d", num);
-}
-
-/**
- * print_float - printlfloat
- * @arg: va_list with the float to print
- */
-void print_float(va_list arg)
-{
-	float num;
-
-	num = va_arg(arg, double);
-	printf("%f", num);
-}
-
-/**
- * print_string - print string
- * @arg: va_list with the string to print
- */
-void print_string(va_list arg)
-{
-	char *string;
-
-	string = va_arg(arg, char *);
-
-	if (string == NULL)
-	{
-		printf("(nil)");
-		return;
-	}
-
-	printf("%s", string);
-}
-
-/**
- * print_all- prints everything
- * @format: type of arguments c, i, f, s
+ * print_all - check the code
+ * @format: string containing all the format chars
  *
- * Return: void cause only print
+ * Return: nothing.
  */
 void print_all(const char * const format, ...)
 {
-	va_list args;
-	int f_count = 0;
-	int p_count;
-	char *separator = "";
-
-	struct printer printer_format[] = {
+	op_t ops[] = {
 		{"c", print_char},
 		{"i", print_int},
 		{"f", print_float},
 		{"s", print_string}
 	};
+	va_list list;
+	int i = 0;
+	int j = 0;
+	int printed_one = 0;
 
-	va_start(args, format);
-
-	while (format != NULL && format[f_count] != '\0')
-	{
-		p_count = 0;
-
-		while (p_count < 4 && format[f_count] != *printer_format[p_count].symbol)
+	va_start(list, format);
+		while (format != NULL && format[i] != '\0')
 		{
-			p_count++;
+			while (j < 4)
+			{
+				if (*ops[j].t == format[i])
+				{
+					/**
+					 * printf("match found - %c\n", format[i]);
+					 */
+
+					if (printed_one == 1)
+						printf(", ");
+
+					ops[j].f(&list);
+					printed_one = 1;
+				}
+				j = j + 1;
+			}
+			j = 0;
+			i = i + 1;
 		}
-
-		if (p_count < 4)
-		{
-			printf("%s", separator);
-			printer_format[p_count].print(args);
-			separator = ", ";
-		}
-
-		f_count++;
-	}
-
+	va_end(list);
 	printf("\n");
-	va_end(args);
 }
 
+/**
+ * print_char - prints a char
+ * @list: pointer to list
+ *
+ * Return : nothing
+ */
+void print_char(va_list *list)
+{
+	char c;
+
+	c = va_arg(*list, int);
+
+	printf("%c", c);
+}
+
+/**
+ * print_int - prints an int
+ * @list: pointer to list
+ *
+ * Return : nothing
+ */
+void print_int(va_list *list)
+{
+	int x;
+
+	x = va_arg(*list, int);
+
+	printf("%d", x);
+}
+
+/**
+ * print_float - prints a float
+ * @list: pointer to list
+ *
+ * Return : nothing
+ */
+void print_float(va_list *list)
+{
+	double f;
+
+	f = va_arg(*list, double);
+
+	printf("%f", f);
+}
+
+/**
+ * print_string - does what it says
+ * @list: pointer to list
+ *
+ * Return : nothing
+ */
+void print_string(va_list *list)
+{
+	char *s;
+
+	s = va_arg(*list, char *);
+
+	printf("%s", (s == NULL) ? "(nil)" : s);
+}
