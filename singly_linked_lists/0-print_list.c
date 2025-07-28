@@ -6,8 +6,8 @@
 
 /**
  * print_list - print out list and return no of nodes
- * list_t: the data
  * @h: the connector
+ *
  * Return: no of nodes
  */
 
