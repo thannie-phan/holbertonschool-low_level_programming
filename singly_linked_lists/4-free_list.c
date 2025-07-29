@@ -11,7 +11,7 @@
  *
  * Return: void
  */
-void free_list(list_t *headlist)
+void free_list(list_t *head)
 {
 	list_t *temp;
 
@@ -22,3 +22,4 @@ void free_list(list_t *headlist)
 		free(head);
 		head = temp;
 	}
+}
