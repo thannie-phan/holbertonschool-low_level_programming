@@ -6,7 +6,7 @@
 
 /**
  * free_list - free memory of list_t list
- * 
+ *
  *
  *
  * Return: void
