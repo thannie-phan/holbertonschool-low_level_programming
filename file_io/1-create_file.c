@@ -4,7 +4,7 @@
 #include <stdlib.h>
 
 /**
- * read_textfile - read the text file
+ * create_file - create file
  * @filename: name of file
  * @text_content: content to put in file
  *
