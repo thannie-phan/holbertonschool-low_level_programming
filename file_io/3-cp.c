@@ -24,13 +24,11 @@ int main(int argc, char *argv[])
 	}
 	source = open(argv[1], O_RDONLY);
 	dest = open(argv[2], O_CREAT | O_WRONLY | O_TRUNC, 0664);
-
 	if (source == -1)
 	{
 		dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", argv[1]);
 		exit(98);
 	}
-
 	while (num1 == 1024)
 	{
 		num1 = read(source, store_content, 1024);
@@ -41,8 +39,10 @@ int main(int argc, char *argv[])
 		}
 		num2 = write(dest, store_content, num1);
 		if (num2 < num1)
+		{
 			dprintf(STDERR_FILENO, "Error: Can't write to %s\n", argv[2])
 			exit(99);
+		}
 	}
 	if (close(source) == -1)
 	{
