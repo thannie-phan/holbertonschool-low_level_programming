@@ -41,15 +41,18 @@ int main(int argc, char *argv[])
 		}
 		num2 = write(dest, store_content, num1);
 		if (num2 < num1)
-			dprintf(STDERR_FILENO, "Error: Can't write to %s\n", argv[2]), exit(99);
+			dprintf(STDERR_FILENO, "Error: Can't write to %s\n", argv[2])
+			exit(99);
 	}
 	if (close(source) == -1)
 	{
-		dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", source, exit(100);
+		dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", source);
+		exit(100);
 	}
 	if (close(dest) == -1)
 	{
-		dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", dest, exit(100);
+		dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", dest);
+		exit(100);
 	}
 	return (0);
 }
