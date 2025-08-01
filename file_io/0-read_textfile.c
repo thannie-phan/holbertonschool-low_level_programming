@@ -11,7 +11,7 @@
  * Return: no of letters the function read and print.
  */
 
-ssize_t read_textfile(const char *filename, size_t letters);
+ssize_t read_textfile(const char *filename, size_t letters)
 {
 	int fd;
 	ssize_t bytes_read, bytes_written;
