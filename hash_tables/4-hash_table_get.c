@@ -20,7 +20,7 @@ char *hash_table_get(const hash_table_t *ht, const char *key)
 	return (0);
 
 	position = key_index((unsigned char *)key, ht->size);
-	current_node = ht->array[find];
+	current_node = ht->array[position];
 
 	while (current_node != NULL)
 	{
